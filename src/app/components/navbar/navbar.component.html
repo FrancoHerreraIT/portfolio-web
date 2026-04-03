@@ -1,0 +1,50 @@
+<nav class="navbar" [class.scrolled]="scrolled">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <a class="nav-logo" (click)="scrollTo('#inicio')">
+      <span class="logo-initials">Inicio</span>
+      <span class="logo-dot"></span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      @for (link of navLinks; track link.anchor) {
+        <li>
+          <button class="nav-link" (click)="scrollTo(link.anchor)">
+            {{ link.label }}
+          </button>
+        </li>
+      }
+    </ul>
+
+    <!-- CTA desktop -->
+    <a
+      class="nav-cta"
+      href="mailto:francohm@example.com"
+      target="_blank"
+    >
+      Contactarme
+    </a>
+
+    <!-- Mobile menu button -->
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu -->
+  @if (menuOpen) {
+    <div class="mobile-menu">
+      @for (link of navLinks; track link.anchor) {
+        <button class="mobile-link" (click)="scrollTo(link.anchor)">
+          {{ link.label }}
+        </button>
+      }
+      <a class="mobile-cta" href="mailto:francohm@example.com">Contactarme</a>
+    </div>
+  }
+</nav>

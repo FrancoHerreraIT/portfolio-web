@@ -1,0 +1,44 @@
+<section class="section stack-section" id="stack">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label">Stack técnico</span>
+      <h2 class="section-title">Tecnologías con las que trabajo</h2>
+      <p class="section-subtitle">
+        Formación orientada al backend .NET, con capacidad full-stack y foco en calidad del código.
+      </p>
+    </div>
+
+    <div class="categories-grid">
+      @for (cat of categories; track cat.label) {
+        <div class="category-card">
+          <div class="category-header">
+            <div class="category-icon" [style.color]="cat.color" [style.background]="cat.color + '18'">
+              <span class="material-icons">{{ cat.icon }}</span>
+            </div>
+            <span class="category-label">{{ cat.label }}</span>
+          </div>
+
+          <div class="tech-icons-grid">
+            @for (item of cat.items; track item.name) {
+              <div class="tech-icon-item">
+                @if (item.devicon) {
+                  <i [class]="item.devicon + ' tech-devicon'" [style.color]="item.color"></i>
+                } @else {
+                  <div class="tech-abbr-badge"
+                       [style.color]="item.color"
+                       [style.border-color]="item.color + '50'">
+                    {{ item.abbr || item.name.slice(0, 3) }}
+                  </div>
+                }
+                <span class="tech-icon-label">{{ item.name }}</span>
+              </div>
+            }
+          </div>
+
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

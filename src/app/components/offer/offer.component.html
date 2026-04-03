@@ -1,0 +1,26 @@
+<section class="section offer-section" id="perfil">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label">¿Qué puedo construirte?</span>
+      <h2 class="section-title">Un perfil junior con base real</h2>
+      <p class="section-subtitle">
+        Construyo sistemas web completos con formación técnica concreta.
+        Sin artificios: esto es lo que sé hacer.
+      </p>
+    </div>
+
+    <div class="offer-grid">
+      @for (item of items; track item.title) {
+        <div class="offer-card">
+          <div class="offer-icon">
+            <span class="material-icons">{{ item.icon }}</span>
+          </div>
+          <h3 class="offer-title">{{ item.title }}</h3>
+          <p class="offer-desc">{{ item.desc }}</p>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

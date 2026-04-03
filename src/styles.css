@@ -1,1 +1,296 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================================
+   GLOBAL STYLES — Franco Herrera Moyano Portfolio
+   ============================================================ */
+
+/* Material prebuilt theme (base estructural) */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* ============================================================
+   CSS VARIABLES — Dark Premium Theme
+   ============================================================ */
+:root {
+  --bg-primary:     #080d18;
+  --bg-secondary:   #0d1422;
+  --bg-card:        #121929;
+  --bg-card-hover:  #172035;
+  --bg-surface:     #0f1826;
+
+  --accent:         #818cf8;   /* indigo-400 */
+  --accent-dark:    #6366f1;   /* indigo-500 */
+  --accent-cyan:    #22d3ee;
+  --accent-glow:    rgba(129, 140, 248, 0.15);
+  --accent-border:  rgba(129, 140, 248, 0.25);
+
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+
+  --border:         rgba(255, 255, 255, 0.06);
+  --border-subtle:  rgba(255, 255, 255, 0.03);
+
+  --shadow-card:    0 4px 24px rgba(0, 0, 0, 0.45);
+  --shadow-hover:   0 12px 40px rgba(99, 102, 241, 0.2);
+  --shadow-glow:    0 0 32px rgba(129, 140, 248, 0.12);
+
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  28px;
+
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-cyan);
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.section-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   ACCENT GRADIENT TEXT
+   ============================================================ */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   MATERIAL COMPONENT OVERRIDES
+   ============================================================ */
+
+/* Override Material toolbar background */
+.mat-toolbar {
+  background: transparent !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Override Material card */
+.mat-mdc-card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+/* Material chips override */
+.mat-mdc-chip {
+  background-color: rgba(129, 140, 248, 0.08) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--accent-border) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8rem !important;
+}
+
+.mat-mdc-chip:hover {
+  background-color: rgba(129, 140, 248, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Material buttons */
+.mat-mdc-raised-button.mat-primary {
+  background: linear-gradient(135deg, var(--accent-dark) 0%, #4f46e5 100%) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+  box-shadow: 0 6px 28px rgba(99, 102, 241, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+.mat-mdc-outlined-button {
+  border-color: var(--accent-border) !important;
+  color: var(--accent) !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.mat-mdc-outlined-button:hover {
+  background-color: var(--accent-glow) !important;
+}
+
+/* Divider */
+.mat-divider {
+  border-color: var(--border) !important;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dark);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+::selection {
+  background: rgba(129, 140, 248, 0.3);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(129, 140, 248, 0.2); }
+  50%       { box-shadow: 0 0 40px rgba(129, 140, 248, 0.4); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section {
+    padding: 48px 0;
+  }
+}

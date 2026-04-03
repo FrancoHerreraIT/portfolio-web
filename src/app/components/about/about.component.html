@@ -1,0 +1,44 @@
+<section class="section about-section" id="sobre-mi">
+  <div class="container">
+
+    <div class="about-grid">
+
+      <!-- Left: text -->
+      <div class="about-text">
+        <div class="section-header">
+          <span class="section-label">Sobre mí</span>
+          <h2 class="section-title">Una base técnica sólida,<br>proyectos que lo demuestran</h2>
+        </div>
+
+        <div class="about-body">
+          <p>
+            Estudiante avanzado de <strong>Analista Universitario en Sistemas Informáticos</strong>
+            en la UNC, finalizando tesis. Construí proyectos propios con <strong>ASP.NET Core,
+            Angular y PostgreSQL</strong>: arquitectura por capas, API REST y autenticación JWT.
+          </p>
+          <p>
+            Ofrezco mis servicios para desarrollar sistemas y aplicaciones web a medida.
+            Disponible de forma presencial en Córdoba o en modalidad remota.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: highlights -->
+      <div class="about-highlights">
+        @for (h of highlights; track h.label) {
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <span class="material-icons">{{ h.icon }}</span>
+            </div>
+            <div class="highlight-info">
+              <span class="highlight-label">{{ h.label }}</span>
+              <span class="highlight-sub">{{ h.sub }}</span>
+            </div>
+          </div>
+        }
+      </div>
+
+    </div>
+
+  </div>
+</section>
