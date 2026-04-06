@@ -1,59 +1,62 @@
-# Portfolio
+# Mi Portfolio Web — Franco Herrera Moyano
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+Portfolio personal armado con Angular 19. Muestra quién soy, mis proyectos y cómo contactarme.
 
-## Development server
+## ¿Qué tiene?
 
-To start a local development server, run:
+- **Navbar** con scroll suave a cada sección
+- **Hero** con presentación principal
+- **Sobre mí** con info personal
+- **Stack** con las tecnologías que uso
+- **Proyectos** con las cosas que hice
+- **Contacto** para que me escriban
+- Diseño oscuro, responsive para mobile
+
+## Stack usado
+
+- [Angular 19](https://angular.dev) — framework principal
+- [Angular Material](https://material.angular.io) — algunos componentes de UI
+- CSS puro para los estilos customizados
+
+## Cómo levantarlo
+
+Necesitás tener Node.js instalado. Después:
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Levantar servidor local
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abrí `http://localhost:4200` en el navegador y listo.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Build para producción
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Los archivos quedan en la carpeta `dist/`.
 
-## Running unit tests
+## Estructura del proyecto
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+src/
+└── app/
+    └── components/
+        ├── navbar/     → barra de navegación
+        ├── hero/       → sección principal
+        ├── about/      → sobre mí
+        ├── stack/      → tecnologías
+        ├── projects/   → proyectos
+        ├── offer/      → mi perfil técnico
+        ├── contact/    → formulario de contacto
+        └── footer/     → pie de página
 ```
 
-## Running end-to-end tests
+## Notas
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Generado con Angular CLI v19.2.9
+- Primera vez que hago algo serio en frontend, así que el código puede no ser perfecto pero funciona

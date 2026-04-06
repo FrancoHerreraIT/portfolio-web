@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   readonly year = new Date().getFullYear();
-  readonly githubUrl   = 'https://github.com/TU_USUARIO';       // ← Reemplazar
-  readonly linkedinUrl = 'https://linkedin.com/in/TU_USUARIO';  // ← Reemplazar
+  readonly githubUrl   = 'https://github.com/FrancoHerreraIT';       
+  readonly linkedinUrl = 'https://www.linkedin.com/in/francoherreramoyano/';  
 }

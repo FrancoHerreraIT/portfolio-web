@@ -10,13 +10,10 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './hero.component.css',
 })
 export class HeroComponent {
-  // =============================================
-  // REEMPLAZAR ESTOS VALORES CON TUS DATOS REALES
-  // =============================================
-  readonly githubUrl    = 'https://github.com/TU_USUARIO';      // ← Reemplazar
-  readonly linkedinUrl  = 'https://linkedin.com/in/TU_USUARIO'; // ← Reemplazar
-  readonly emailAddress = 'tucorreo@gmail.com';                  // ← Reemplazar
-  // =============================================
+  readonly githubUrl    = 'https://github.com/FrancoHerreraIT';      
+  readonly linkedinUrl  = 'https://www.linkedin.com/in/francoherreramoyano/';
+  readonly emailAddress = 'francoherreramoyano@gmail.com';                  
+
 
   scrollTo(id: string): void {
     const el = document.getElementById(id);

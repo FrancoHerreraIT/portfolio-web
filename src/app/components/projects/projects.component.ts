@@ -35,7 +35,7 @@ export class ProjectsComponent {
         'Base de datos PostgreSQL con Entity Framework Core',
       ],
       tags:      ['ASP.NET Core', 'Angular', 'JWT', 'PostgreSQL', 'EF Core', 'Web API REST'],
-      githubUrl: 'https://github.com/TU_USUARIO/biblioteca-digital', // ← Reemplazar
+      githubUrl: 'https://github.com/FrancoHerreraIT/proyecto-biblioteca', 
       demoUrl:   null,
       type:      'fullstack',
     },

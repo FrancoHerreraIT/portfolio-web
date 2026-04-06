@@ -9,7 +9,7 @@
   align-items: start;
 }
 
-/* Text side */
+
 .about-text .section-header {
   margin-bottom: 32px;
 }
@@ -30,7 +30,7 @@
   font-weight: 600;
 }
 
-/* Highlights */
+
 .about-highlights {
   display: flex;
   flex-direction: column;

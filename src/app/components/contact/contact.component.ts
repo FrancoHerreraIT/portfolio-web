@@ -8,11 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  // =============================================
-  // REEMPLAZAR CON TUS DATOS REALES
-  // =============================================
-  readonly email      = 'tucorreo@gmail.com';                  // ← Tu email real
-  readonly githubUrl  = 'https://github.com/TU_USUARIO';       // ← Tu GitHub
-  readonly linkedinUrl = 'https://linkedin.com/in/TU_USUARIO'; // ← Tu LinkedIn
-  // =============================================
+  readonly email      = 'francoherreramoyano@gmail.com';                  
+  readonly githubUrl  = 'https://github.com/FrancoHerreraIT';       
+  readonly linkedinUrl = 'https://www.linkedin.com/in/francoherreramoyano/'; 
+  
 }
